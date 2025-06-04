@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Checkout Source Code
+      - name: Checkout Source Code
         uses: actions/checkout@v4
       - name: Create env file
         run: |
@@ -35,5 +35,3 @@ jobs:
         run: docker rm -f task-container
       - name: Run Container
         run: docker run -d -p 80:80 --name task-container hongseongyun/aicc6_task_front
-
-        
